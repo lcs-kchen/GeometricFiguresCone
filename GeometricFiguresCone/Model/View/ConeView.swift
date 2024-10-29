@@ -13,6 +13,10 @@ struct ConeView: View {
     var body: some View {
         VStack {
             
+            Image("Cone")
+                .resizable()
+                .scaledToFit()
+            
             Slider(
                 value: $currentCone.radius,
                 in: 1...100,
@@ -31,6 +35,8 @@ struct ConeView: View {
                 in: 1...100,
                 step: 1.0
                 )
+       
+            
             
             
             //Label (show the current slider value)
@@ -61,6 +67,7 @@ struct ConeView: View {
             
             Spacer()
         }
+        .padding()
         }
     }
     
